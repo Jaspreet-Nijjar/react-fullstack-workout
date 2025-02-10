@@ -10,9 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.json({ mssge: 'Welcome to the app' });
-});
+app.use('/api/workouts', workoutRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('listening on', process.env.PORT);
